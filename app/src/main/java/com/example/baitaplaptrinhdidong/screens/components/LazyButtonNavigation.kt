@@ -11,8 +11,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 
 @Composable
-fun LazyButtonNav(navController: NavHostController, nameBtnLabel: String, nameScreen: String) {
-    val buttonLabels = (1..2).map {"${nameBtnLabel} ${it}"}
+fun LazyButtonNav(navController: NavHostController,size: Int, nameBtnLabel: String, nameScreen: String) {
+    val buttonLabels = (1..size).map {"${nameBtnLabel} ${it}"}
 
     LazyColumn(Modifier.padding(16.dp)) {
         items(buttonLabels) { label ->
