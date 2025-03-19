@@ -35,14 +35,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
+import androidx.navigation.NavController
 import com.example.baitaplaptrinhdidong.R
 import com.example.baitaplaptrinhdidong.screens.BaseScreen
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Week1(navController: NavHostController) {
+fun Week1(navController: NavController) {
     BaseScreen(
         "",
         true,

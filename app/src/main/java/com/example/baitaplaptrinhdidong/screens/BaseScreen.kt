@@ -10,10 +10,12 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -24,6 +26,8 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -39,11 +43,11 @@ fun BaseScreen(
     Scaffold (
         topBar = {
             TopAppBar(
-                title = { Text(title, modifier = Modifier.fillMaxWidth().wrapContentWidth()) },
+                title = { Text(title) },
                 navigationIcon = {
                     if (showBackButton) {
                         IconButton(onClick = { onBackClick?.invoke()}, Modifier.padding(10.dp)) {
-                            Icon( imageVector = Icons.Filled.ArrowBack, contentDescription = "Back")
+                            Icon( imageVector = Icons.Filled.KeyboardArrowLeft, contentDescription = "Back")
                         }
                     }
                 },
@@ -52,12 +56,18 @@ fun BaseScreen(
         },
         bottomBar = {
             actionsBot?.let {
-                BottomAppBar () { it() }
+                BottomAppBar (
+                    modifier = Modifier.wrapContentWidth(),
+                    containerColor = Color.White) { it() }
             }
         }
     ) { padding ->
-        Box(modifier = Modifier.fillMaxSize()) {
-            content(padding)
-        }
+        content(padding)
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun prev() {
+    BaseScreen {  }
 }

@@ -37,13 +37,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.baitap.screens.components.LazyButtonNav
 import com.example.baitap.screens.components.NotiDialog
 import com.example.baitaplaptrinhdidong.screens.BaseScreen
 
 @Composable
-fun Week2(navController: NavHostController) {
+fun Week2(navController: NavController) {
     BaseScreen(
         "Tuần 2",
         true,
@@ -55,7 +56,7 @@ fun Week2(navController: NavHostController) {
                 .wrapContentSize(Alignment.TopCenter)
                 .padding(padding)
         ) {
-            LazyButtonNav(navController, 2, "Bài", "exercise")
+            LazyButtonNav(navController, 2, "Bài", "w2_exercise")
         }
 
     }

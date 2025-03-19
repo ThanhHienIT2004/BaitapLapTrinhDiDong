@@ -30,7 +30,7 @@ import com.example.baitap.screens.components.NotiDialog
 import com.example.baitaplaptrinhdidong.screens.BaseScreen
 
 @Composable
-fun Exercise1_W2(navController: NavHostController) {
+fun W2_Exercise1(navController: NavHostController) {
     var name by remember { mutableStateOf("") }
     var age by remember { mutableIntStateOf(0) }
     var result by remember { mutableStateOf("") }

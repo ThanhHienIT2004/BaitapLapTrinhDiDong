@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.baitap.screens.AppNavigation
+import com.example.baitaplaptrinhdidong.navHost.AppNavigation
 import com.example.baitaplaptrinhdidong.ui.theme.BaitapLapTrinhDiDongTheme
 
 class MainActivity : ComponentActivity() {
