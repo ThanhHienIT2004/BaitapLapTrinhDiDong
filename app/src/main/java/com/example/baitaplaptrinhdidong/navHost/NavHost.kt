@@ -5,18 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.baitap.screens.MainScreen
-import com.example.baitap.screens.Week1
-import com.example.baitap.screens.Week2
-import com.example.baitaplaptrinhdidong.screens.Week3
-import com.example.baitaplaptrinhdidong.screens.components.W2_Exercise1
-import com.example.baitaplaptrinhdidong.screens.components.W2_Exercise2
-import com.example.baitaplaptrinhdidong.screens.components.W3_Ex1_Page1
-import com.example.baitaplaptrinhdidong.screens.components.W3_Ex1_Page2
-import com.example.baitaplaptrinhdidong.screens.components.W3_Ex2_Page1
-import com.example.baitaplaptrinhdidong.screens.components.W3_Ex2_Page2
-import com.example.baitaplaptrinhdidong.screens.components.W3_Ex2_Page3
-import com.example.baitaplaptrinhdidong.screens.components.W3_Exercise1
-import com.example.baitaplaptrinhdidong.screens.components.W3_Exercise2
+import com.example.baitaplaptrinhdidong.ui.screens.*
+import com.example.baitaplaptrinhdidong.ui.screens.components.*
 
 @Composable
 fun AppNavigation() {
@@ -44,5 +34,18 @@ fun AppNavigation() {
                 composable("w3_ex2_page_2") { W3_Ex2_Page2(navController) }
                 composable("w3_ex2_page_3") { W3_Ex2_Page3(navController) }
         // Tuần 4
+        composable("week_4") { Week4(navController) }
+            // Ex1
+            composable("w4_exercise_1") { W4_Exercise1(navController) }
+                composable("w4_ex1_page_1") { W4_Ex1_Page1(navController) }
+                composable("w4_ex1_page_2") { W4_Ex1_Page2(navController) }
+                composable("w4_ex1_page_3") { W4_Ex1_Page3(navController) }
+            // Ex2
+            composable("w4_exercise_2") { W4_Exercise2(navController) }
+                composable("w4_ex2_page_1") { W4_Ex2_Page1(navController) }
+                composable("w4_ex2_page_2/{query}") { backStackEntry ->
+                    val query = backStackEntry.arguments?.getString("query")?.toIntOrNull() ?: 0
+                    W4_Ex2_Page2(navController, query)
+                }
     }
 }

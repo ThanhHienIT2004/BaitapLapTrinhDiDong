@@ -8,9 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
 import com.example.baitap.screens.components.LazyButtonNav
-import com.example.baitaplaptrinhdidong.screens.BaseScreen
+import com.example.baitaplaptrinhdidong.ui.screens.BaseScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -20,7 +19,7 @@ fun MainScreen(navController: NavController) {
             modifier = Modifier.padding(padding).fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            LazyButtonNav(navController, 3, "Tuần", "week")
+            LazyButtonNav(navController, 4, "Tuần", "week")
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.baitaplaptrinhdidong.screens.components
+package com.example.baitaplaptrinhdidong.ui.screens.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -41,7 +40,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.baitaplaptrinhdidong.R
-import com.example.baitaplaptrinhdidong.screens.BaseScreen
+import com.example.baitaplaptrinhdidong.ui.screens.BaseScreen
 import kotlinx.coroutines.delay
 
 @Composable

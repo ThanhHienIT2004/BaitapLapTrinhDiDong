@@ -1,4 +1,4 @@
-package com.example.baitaplaptrinhdidong.screens.components
+package com.example.baitaplaptrinhdidong.ui.screens.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.baitaplaptrinhdidong.R
-import com.example.baitaplaptrinhdidong.screens.BaseScreen
+import com.example.baitaplaptrinhdidong.ui.screens.BaseScreen
 
 @Composable
 fun W3_Exercise1(navController: NavController) {
