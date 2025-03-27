@@ -1,6 +1,5 @@
 package com.example.baitaplaptrinhdidong.screens
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -9,7 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.example.baitap.screens.components.LazyButtonNav
+import com.example.baitaplaptrinhdidong.screens.base.BaseScreen
+import com.example.baitaplaptrinhdidong.screens.components.LazyButtonNav
 
 @Composable
 fun Week3(navController: NavController) {
@@ -23,7 +23,7 @@ fun Week3(navController: NavController) {
                 .wrapContentSize(Alignment.TopCenter)
                 .padding(padding)
         ) {
-            LazyButtonNav(navController, 2, "Bài", "w3_exercise")
+            LazyButtonNav(navController, 2, "Bài", "w3")
         }
 
     }

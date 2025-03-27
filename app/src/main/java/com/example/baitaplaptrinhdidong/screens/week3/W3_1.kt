@@ -1,4 +1,4 @@
-package com.example.baitaplaptrinhdidong.screens.components
+package com.example.baitaplaptrinhdidong.screens.week3
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -32,15 +32,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.baitaplaptrinhdidong.R
-import com.example.baitaplaptrinhdidong.screens.BaseScreen
+import com.example.baitaplaptrinhdidong.screens.base.BaseScreen
 
 @Composable
-fun W3_Exercise1(navController: NavController) {
+fun W3_1(navController: NavController) {
     BaseScreen(
         showBackButton = true,
         onBackClick = { navController.popBackStack() },
         actionsBot = {
-            Button(onClick = { navController.navigate("w3_ex1_page_1")},
+            Button(onClick = { navController.navigate("w3_1_screen_2")},
                 modifier = Modifier.fillMaxWidth()
                     .height(60.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF03A9F4))
@@ -78,7 +78,7 @@ fun W3_Exercise1(navController: NavController) {
 
 // -------------------------------- page 1 -----------------------------------
 @Composable
-fun W3_Ex1_Page1(navController: NavController) {
+fun W3_1_Screen_2(navController: NavController) {
     BaseScreen(
         actionsTop = {
             Spacer(Modifier.weight(1f))
@@ -92,13 +92,13 @@ fun W3_Ex1_Page1(navController: NavController) {
             modifier = Modifier.padding(padding)
                 .padding(10.dp)
         ) {
-            W3_Ex1_Section1(navController)
+            W3_1_Section_1(navController)
         }
     }
 }
 
 @Composable
-fun W3_Ex1_Section1(navController: NavController) {
+fun W3_1_Section_1(navController: NavController) {
     val contentList = listOf(
         "Display", listOf(
             listOf("Text", "Displays text"),
@@ -127,7 +127,7 @@ fun W3_Ex1_Section1(navController: NavController) {
                         Card(
                             modifier = Modifier.fillMaxWidth()
                                 .padding(vertical = 5.dp)
-                                .clickable { navController.navigate("w3_ex1_page_2")},
+                                .clickable { navController.navigate("w3_2_screen_3")},
                             colors = CardDefaults.cardColors(Color(0xFF6ACCF8))
                         ) {
                             Column(
@@ -154,7 +154,7 @@ fun W3_Ex1_Section1(navController: NavController) {
 
 // ----------------------------------- page 2 ------------------------------------------
 @Composable
-fun W3_Ex1_Page2(navController: NavController) {
+fun W3_1_Screen_3(navController: NavController) {
     BaseScreen(
         showBackButton = true,
         onBackClick = {navController.popBackStack()},
@@ -212,7 +212,7 @@ fun StyledText() {
 
 @Preview(showBackground = true)
 @Composable
-fun prev3w3() {
+fun Prev3w3() {
 ////    val navController = rememberNavController()
 ////    W3_Exercise1(navController)
 //    W3_Ex1_Page2()

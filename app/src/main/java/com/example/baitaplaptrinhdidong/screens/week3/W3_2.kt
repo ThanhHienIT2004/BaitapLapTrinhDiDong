@@ -1,4 +1,4 @@
-package com.example.baitaplaptrinhdidong.screens.components
+package com.example.baitaplaptrinhdidong.screens.week3
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -41,11 +40,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.baitaplaptrinhdidong.R
-import com.example.baitaplaptrinhdidong.screens.BaseScreen
+import com.example.baitaplaptrinhdidong.screens.base.BaseScreen
 import kotlinx.coroutines.delay
 
 @Composable
-fun W3_Exercise2(navController: NavController) {
+fun W3_2(navController: NavController) {
     BaseScreen() {padding ->
         Column(
             modifier = Modifier
@@ -60,7 +59,7 @@ fun W3_Exercise2(navController: NavController) {
                 contentDescription = "Icon",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .size(60.dp)
+                    .size(20.dp)
             )
             Spacer(Modifier.height(20.dp))
             Text("UTH SmartTasks", fontSize = 30.sp, fontWeight = FontWeight.Bold,
@@ -76,17 +75,17 @@ fun W3_Exercise2(navController: NavController) {
         }
 
         if (showPage) {
-            W3_Ex2_Page1(navController)
+            W3_2_Screen_2(navController)
         }
 
     }
 }
 
 @Composable
-fun W3_Ex2_Page1(navController: NavController) {
+fun W3_2_Screen_2(navController: NavController) {
     BaseScreen(
         actionsBot = {
-            Button(onClick = { navController.navigate("w3_ex2_page_2")},
+            Button(onClick = { navController.navigate("w3_2_screen_3")},
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(60.dp),
@@ -130,7 +129,7 @@ fun W3_Ex2_Page1(navController: NavController) {
 }
 
 @Composable
-fun W3_Ex2_Page2(navController: NavController) {
+fun W3_2_Screen_3(navController: NavController) {
     BaseScreen(
         actionsBot = {
             Row(
@@ -200,7 +199,7 @@ fun W3_Ex2_Page2(navController: NavController) {
 }
 
 @Composable
-fun W3_Ex2_Page3(navController: NavController) {
+fun W3_2_Screen_4(navController: NavController) {
     BaseScreen(
         actionsBot = {
             Row(
@@ -222,7 +221,7 @@ fun W3_Ex2_Page3(navController: NavController) {
                     )
                 }
 
-                Button(onClick = { navController.navigate("w3_ex2_page_3")},
+                Button(onClick = { navController.navigate("w4_1_screen_2")},
                     modifier = Modifier
                         .weight(4f)
                         .height(60.dp),
@@ -271,10 +270,7 @@ fun W3_Ex2_Page3(navController: NavController) {
 
 @Preview(showBackground = true)
 @Composable
-fun prev32w3() {
+fun Prev32w3() {
     val navController = rememberNavController()
-//    W3_Exercise2(navController)
-//    W3_Ex2_Page1(navController)
-    W3_Ex2_Page2(navController)
-//    W3_Ex2_Page3(navController)
+    W3_2_Screen_3(navController)
 }

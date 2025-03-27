@@ -5,8 +5,8 @@ import androidx.lifecycle.ViewModel
 
 class UsersViewModel: ViewModel() {
     var dataTable = mutableStateListOf(
-        mutableListOf("1", "Dang Quang"),
-        mutableListOf("2", "Quang Dang")
+        mutableListOf("1", "Thanh Hien"),
+        mutableListOf("2", "Hien Ha Ha")
     )
 
         private set

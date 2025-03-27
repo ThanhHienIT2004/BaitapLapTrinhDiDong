@@ -1,4 +1,4 @@
-package com.example.baitaplaptrinhdidong.screens.components
+package com.example.baitaplaptrinhdidong.screens.week2
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -26,11 +26,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.baitap.screens.components.NotiDialog
-import com.example.baitaplaptrinhdidong.screens.BaseScreen
+import com.example.baitaplaptrinhdidong.screens.base.BaseScreen
+import com.example.baitaplaptrinhdidong.screens.components.NotiDialog
 
 @Composable
-fun W2_Exercise1(navController: NavHostController) {
+fun W2_1(navController: NavHostController) {
     var name by remember { mutableStateOf("") }
     var age by remember { mutableIntStateOf(0) }
     var result by remember { mutableStateOf("") }
